@@ -8,7 +8,7 @@ export default function Navbar() {
         <header className="bg-gray-900 text-gray-50 py-6 px-4 md:px-6 flex items-center justify-between">
             <Link href="#" className="flex items-center gap-2" prefetch={false}>
                 <CodeIcon className="w-6 h-6" />
-                <span className="text-xl font-semibold">John Doe</span>
+                <span className="text-xl font-semibold">Alvaro Peña</span>
             </Link>
             <nav className="hidden md:flex items-center gap-4">
                 <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
