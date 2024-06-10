@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button'
 
 export default function Navbar() {
     return (
-        <header className="bg-gray-900 text-gray-50 py-6 px-4 md:px-6 flex items-center justify-between">
+        <header className="text-gray-50 py-6 px-4 md:px-6 flex items-center justify-between">
             <Link href="#" className="flex items-center gap-2" prefetch={false}>
-                <CodeIcon className="w-6 h-6" />
                 <span className="text-xl font-semibold">Alvaro Peña</span>
             </Link>
             <nav className="hidden md:flex items-center gap-4">

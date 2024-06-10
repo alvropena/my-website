@@ -12,20 +12,19 @@ import Footer from '@/components/footer'
 import ContactForm from '@/components/contact-form'
 import Essays from '@/components/essays'
 import Projects from '@/components/projects'
-import AboutMe from '@/components/about'
-import Hero from '@/components/hero'
+import AboutMe from '@/components/about-me'
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Navbar />
-      <main className="flex-1">
-        <Hero />
+      <div className="flex-1">
+
         <AboutMe />
         <Projects />
         <Essays />
         <ContactForm />
-      </main>
+      </div>
       <Footer />
     </div>
   )

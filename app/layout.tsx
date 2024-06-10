@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto, Cutive_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themes/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const cutive_mono = Cutive_Mono({
+  weight: ["400"],
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Alvaro Peña",
@@ -23,7 +26,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <body className={inter.className}>{children}</body>
+        <body className={cutive_mono.className}>{children}</body>
       </ThemeProvider>
     </html>
   );

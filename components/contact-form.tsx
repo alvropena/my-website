@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 export default function ContactForm() {
     return (
-        <section id="contact" className="bg-gray-100 dark:bg-gray-800 py-12 md:py-20 px-4 md:px-6">
+        <section id="contact" className="py-12 md:py-20 px-4 md:px-6">
             <div className="max-w-3xl mx-auto space-y-8">
                 <div className="space-y-4">
                     <h2 className="text-3xl font-bold">Contact Me</h2>
