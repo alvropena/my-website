@@ -2,6 +2,7 @@ import React from 'react'
 import { EssayTable } from '@/components/essay-table'
 import { ModeToggle } from '@/components/themes/mode-toggle'
 import SocialMediaIcons from '@/components/social-media-icons'
+import ProjectsCard from '@/components/projects-card'
 
 export default function Component() {
   return (
@@ -24,7 +25,7 @@ export default function Component() {
         I&apos;m a self-taught software engineer.
       </p>
       <h2 className="text-xl font-semibold mb-2">Projects</h2>
-
+      <ProjectsCard />
       <h2 className="text-xl font-semibold mb-2">Essays</h2>
       <EssayTable />
       <h2 className="text-xl font-semibold mb-2">Contact</h2>
