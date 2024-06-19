@@ -1,31 +1,34 @@
 import React from 'react'
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { CodeIcon, MenuIcon } from 'lucide-react'
-import Image from 'next/image'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
-import ContactForm from '@/components/contact-form'
-import Essays from '@/components/essays'
-import Projects from '@/components/projects'
-import AboutMe from '@/components/about-me'
+import { EssayTable } from '@/components/essay-table'
+import { ModeToggle } from '@/components/themes/mode-toggle'
+import SocialMediaIcons from '@/components/social-media-icons'
 
 export default function Component() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <Navbar />
-      <div className="flex-1">
-
-        <AboutMe />
-        <Projects />
-        <Essays />
-        <ContactForm />
+    <div className="flex flex-col p-4">
+      <div className="flex justify-between">
+        <div>
+          <h1 className="text-2xl font-bold mb-2">Alvaro Peña</h1>
+          <p className="mb-4">San Francisco, CA | Lima, PE</p>
+        </div>
+        <ModeToggle />
       </div>
-      <Footer />
+      <h2 className="text-xl font-semibold mb-2">About Me</h2>
+      <p className="mb-4">
+        I&apos;m the founder and CEO of Chop - the first generative learning platform. I&apos;m originally from Peru, but migrated to the US in 2024.
+      </p>
+      <p className="mb-4">
+        I graduated from Economics at Cal State East Bay, after four years of studying in Peru at Universidad del Pacífico I decided to transfer.
+      </p>
+      <p className="mb-4">
+        I&apos;m a self-taught software engineer.
+      </p>
+      <h2 className="text-xl font-semibold mb-2">Projects</h2>
+
+      <h2 className="text-xl font-semibold mb-2">Essays</h2>
+      <EssayTable />
+      <h2 className="text-xl font-semibold mb-2">Contact</h2>
+      <SocialMediaIcons />
     </div>
   )
 }
