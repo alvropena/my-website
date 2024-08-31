@@ -7,8 +7,8 @@ import { MapPin } from 'lucide-react'
 
 export default function Component() {
   return (
-    <div className="flex flex-col p-4 max-w-xl w-full">
-      <div className="flex justify-between">
+    <div className="flex flex-col p-4 max-w-xl w-full mx-auto h-screen justify-center ">
+      <div className="flex justify-between w-full">
         <div>
           <h1 className="text-2xl font-bold mb-2">Alvaro Peña</h1>
           <div className="flex mb-4">
@@ -28,11 +28,11 @@ export default function Component() {
       <p className="mb-4">
         I&apos;m a self-taught software engineer.
       </p>
-      <h2 className="text-xl font-semibold mb-2">Projects</h2>
+      <h2 className="text-xl font-semibold my-2">Projects</h2>
       <ProjectsCard />
-      <h2 className="text-xl font-semibold mb-2">Essays</h2>
+      <h2 className="text-xl font-semibold my-2">Blog</h2>
       <EssayTable />
-      <h2 className="text-xl font-semibold mb-2">Contact</h2>
+      <h2 className="text-xl font-semibold my-2">Contact</h2>
       <SocialMediaIcons />
     </div>
   )

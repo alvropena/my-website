@@ -5,16 +5,16 @@ import { Mail, X, LinkedinIcon, Github } from 'lucide-react'
 export default function SocialMediaIcons() {
     return (
         <div className="flex space-x-2 mb-4">
-            <Button>
+            <Button variant="outline" size="icon">
                 <Mail />
             </Button>
-            <Button>
+            <Button variant="outline" size="icon">
                 <LinkedinIcon />
             </Button>
-            <Button>
+            <Button variant="outline" size="icon">
                 <X />
             </Button>
-            <Button>
+            <Button variant="outline" size="icon">
                 <Github />
             </Button>
         </div>
