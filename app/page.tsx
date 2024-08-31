@@ -3,14 +3,18 @@ import { EssayTable } from '@/components/essay-table'
 import { ModeToggle } from '@/components/themes/mode-toggle'
 import SocialMediaIcons from '@/components/social-media-icons'
 import ProjectsCard from '@/components/projects-card'
+import { MapPin } from 'lucide-react'
 
 export default function Component() {
   return (
-    <div className="flex flex-col p-4">
+    <div className="flex flex-col p-4 max-w-xl w-full">
       <div className="flex justify-between">
         <div>
           <h1 className="text-2xl font-bold mb-2">Alvaro Peña</h1>
-          <p className="mb-4">San Francisco, CA | Lima, PE</p>
+          <div className="flex mb-4">
+            <MapPin className='mr-2 h-5 w-5' />
+            San Francisco, CA
+          </div>
         </div>
         <ModeToggle />
       </div>
