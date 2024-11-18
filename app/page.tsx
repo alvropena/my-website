@@ -121,7 +121,7 @@ const WorkExperience = () => (
     </div>
   </section>
 )
-
+  
 const Education = () => (
   <section className="px-4 space-y-3">
     <h2 className="text-lg font-semibold">Education</h2>
@@ -176,16 +176,36 @@ const Projects = () => (
     <h2 className="text-lg font-semibold">Projects</h2>
     <div className="space-y-3">
       <div>
-        <h3 className="text-base font-medium">OnlyFans AI chatter</h3>
-        <p className="text-gray-500">Lead Developer • 2023</p>
-        <p className="mt-1">Developed a deep learning system for automated medical image analysis using PyTorch and FastAPI. Implemented a custom CNN architecture that achieved 95% accuracy in detecting abnormalities, reducing diagnosis time by 60%. Deployed on AWS using Docker and Kubernetes, serving 10,000+ daily requests.</p>
-        <p className="text-gray-600 mt-1">Technologies: Python, PyTorch, FastAPI, Docker, AWS, Kubernetes</p>
+        <div className="flex items-center gap-2">
+         
+          <a 
+            href="https://onley.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-gray-500 transition-colors duration-200 hover:text-gray-700"
+          >
+             <h3 className="text-base font-medium">Onley</h3>
+          </a>
+        </div>
+        <p className="text-gray-500">Lead Developer • 2024</p>
+        <p className="mt-1">Built an AI-powered chat system for OnlyFans creators to automate fan engagement. Leveraged GPT-4 API and fine-tuning to create personalized chat experiences. Implemented real-time message processing and content moderation using Python and FastAPI.</p>
+        <p className="text-gray-600 mt-1">Technologies: Python, FastAPI, OpenAI, Docker, AWS, PostgreSQL</p>
       </div>
       <div>
-        <h3 className="text-base font-medium">Real-time Language Translation System</h3>
-        <p className="text-gray-500">Technical Lead • 2022</p>
-        <p className="mt-1">Built an end-to-end translation system using transformer models and TensorFlow, supporting 15 languages with 92% accuracy. Optimized inference latency to under 100ms using ONNX runtime. Implemented as a React Native mobile app with 50,000+ downloads.</p>
-        <p className="text-gray-600 mt-1">Technologies: TensorFlow, ONNX, React Native, Node.js, MongoDB</p>
+        <div className="flex items-center gap-2">
+          
+          <a
+            href="https://bhuma.dev" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-gray-500"
+          >
+            <h3 className="text-base font-medium">Bhuma</h3>
+          </a>
+        </div>
+        <p className="text-gray-500">Technical Lead • 2024</p>
+        <p className="mt-1">Developed a modern web application for managing and tracking personal finances. Built with Next.js 14 and TypeScript, featuring real-time updates and interactive data visualizations. Implemented secure authentication and data encryption.</p>
+        <p className="text-gray-600 mt-1">Technologies: Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Vercel</p>
       </div>      
     </div>
   </section>
