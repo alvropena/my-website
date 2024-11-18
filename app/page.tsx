@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { LinkedInLogoIcon, EnvelopeClosedIcon, GitHubLogoIcon, DownloadIcon } from "@radix-ui/react-icons"
 import { useRef } from "react"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
-const Profile = () => (
+const Profile = ({ skills }: { skills: string[] }) => (
   <>
     <h1 className="text-xl font-bold text-center py-2">Alvaro Peña</h1>
     <p className="text-gray-500 text-center mb-2">AI Engineer</p>
@@ -29,10 +35,35 @@ const Profile = () => (
         </a>
       </Button>
     </div>
+    <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
+        {skills.slice(0, 6).map((skill) => (
+          <Badge 
+            key={skill}
+            variant="secondary" 
+            className="text-xs"
+          >
+            {skill}
+          </Badge>
+        ))}
+      </div>
+      <div className="flex flex-wrap justify-center gap-2">
+        {skills.slice(6).map((skill) => (
+          <Badge
+            key={skill}
+            variant="secondary"
+            className="text-xs"
+          >
+            {skill}
+          </Badge>
+        ))}
+      </div>
+    </div>
+    
   </>
 )
 
-const Summary = ({ skills }: { skills: string[] }) => (
+const Summary = () => (
   <div className="px-4 space-y-3">
     <h2 className="text-lg font-semibold">Summary</h2>
     <p className="text-left">
@@ -243,25 +274,16 @@ const Certifications = () => (
   </section>
 )
 
-const Skills = ({ skills }: { skills: string[] }) => (
-  <section className="px-4 space-y-3">
-    <h2 className="text-lg font-semibold">Skills</h2>
-    <div className="grid grid-cols-8 gap-2">
-      {skills.map((skill) => (
-        <Badge key={skill} variant="secondary" className="justify-center mx-1 w-full text-xs">
-          {skill}
-        </Badge>
-      ))}
-    </div>
-  </section>
-)
-
 const Languages = () => (
   <section className="px-4 space-y-3">
     <h2 className="text-lg font-semibold">Languages</h2>
     <div className="space-y-2">
       <div>
         <p className="font-medium">English</p>
+        <p className="text-gray-500">Native or bilingual proficiency</p>
+      </div>
+      <div>
+        <p className="font-medium">Spanish</p>
         <p className="text-gray-500">Native or bilingual proficiency</p>
       </div>
       <div>
@@ -279,10 +301,19 @@ const Footer = () => (
       © 2024 Alvaro Peña. All rights reserved.      
       </div>
       <div className="flex gap-2">
-        <Button variant="ghost" size="icon">
-          <DownloadIcon className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Download Resume</span>
-        </Button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <DownloadIcon className="h-[1.2rem] w-[1.2rem]" />
+                <span className="sr-only">Download Resume</span>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Coming soon</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     </div>
   </footer>
@@ -290,38 +321,21 @@ const Footer = () => (
 
 export default function Home() {
   const skills = [
-    "Python", "JavaScript", "TypeScript", "React", "Next.js",
-    "Node.js", "FastAPI", "SQLAlchemy", "SQL", "MongoDB",
-    "Docker", "Kubernetes", "AWS", "Git", "CI/CD",
-     "TensorFlow", "PyTorch",
-    "React.js", "Redux.js", "Vercel"
+    "Python", "R", "JavaScript", "TypeScript", "React",  "React Native",
+    "Node.js", "FastAPI", "SQL", "Docker", "Kubernetes",
+    "AWS", "Git", "CI/CD", "LangChain"
   ];
 
-  const skillCategories = [
-    {
-      title: "Backend",
-      skills: ["FastAPI", "Python", "SQLAlchemy", "Node.js"]
-    },
-    {
-      title: "Infrastructure", 
-      skills: ["Docker", "Kubernetes", "AWS", "Git", "CI/CD"]
-    },
-    {
-      title: "Frontend",
-      skills: ["React.js", "Redux.js", "React Hooks", "React Router", "Next.js", "Vercel"]
-    }
-  ];
   const componentRef = useRef<HTMLDivElement>(null)
 
   return (
     <main className="max-w-2xl mx-auto text-sm" ref={componentRef}>
-      <Profile />
-      <Summary skills={skills} />
+      <Profile skills={skills} />
+      <Summary/>
       <WorkExperience />
       <Education />
       <Projects />
       <Certifications />
-      <Skills skills={skills} />
       <Languages />
       <Footer />
     </main>
