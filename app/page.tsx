@@ -201,30 +201,33 @@ const Education = () => (
     </div>
   </section>
 )
-
 const Projects = () => (
   <section className="px-4 space-y-3">
     <h2 className="text-lg font-semibold">Projects</h2>
     <div className="space-y-3">
+
       <div>
         <div className="flex items-center gap-2">
-         
           <a 
             href="https://onley.ai"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline text-gray-500 transition-colors duration-200 hover:text-gray-700"
           >
-             <h3 className="text-base font-medium">Onley</h3>
+            <h3 className="text-base font-medium">Onley</h3>
           </a>
         </div>
-        <p className="text-gray-500">Lead Developer • 2024</p>
-        <p className="mt-1">Built an AI-powered chat system for OnlyFans creators to automate fan engagement. Leveraged GPT-4 API and fine-tuning to create personalized chat experiences. Implemented real-time message processing and content moderation using Python and FastAPI.</p>
-        <p className="text-gray-600 mt-1">Technologies: Python, FastAPI, OpenAI, Docker, AWS, PostgreSQL</p>
+        <p className="text-gray-500">AI Engineer • 2024</p>
+        <p className="mt-1">
+          Created an AI-powered Chrome extension that automates fan engagement on OnlyFans by reverse-engineering its API. Built a dashboard for creators to track engagement analytics, which has already facilitated over 100,000 messages sent.
+        </p>
+        <p className="text-gray-600 mt-1">
+          Technologies: Python, FastAPI, OpenAI, Docker, AWS, PostgreSQL, Angular, LangChain, Helicone, OpenPipe
+        </p>
       </div>
+
       <div>
         <div className="flex items-center gap-2">
-          
           <a
             href="https://bhuma.dev" 
             target="_blank"
@@ -234,13 +237,18 @@ const Projects = () => (
             <h3 className="text-base font-medium">Bhuma</h3>
           </a>
         </div>
-        <p className="text-gray-500">Technical Lead • 2024</p>
-        <p className="mt-1">Developed a modern web application for managing and tracking personal finances. Built with Next.js 14 and TypeScript, featuring real-time updates and interactive data visualizations. Implemented secure authentication and data encryption.</p>
-        <p className="text-gray-600 mt-1">Technologies: Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Vercel</p>
-      </div>      
+        <p className="text-gray-500">AI Engineer • 2024</p>
+        <p className="mt-1">
+          Developed a chatbot that translates natural language into SQL queries, enabling users to create dashboards by connecting to Presto clusters.
+        </p>
+        <p className="text-gray-600 mt-1">
+          Technologies: Python, FastAPI, LangChain, Presto
+        </p>
+      </div>
+
     </div>
   </section>
-)
+);
 
 const Certifications = () => (
   <section className="px-4 space-y-3">
@@ -302,7 +310,7 @@ const Footer = () => (
       </div>
       <div className="flex gap-2">
         <TooltipProvider>
-          <Tooltip>
+          <Tooltip defaultOpen>
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon">
                 <DownloadIcon className="h-[1.2rem] w-[1.2rem]" />
@@ -310,7 +318,7 @@ const Footer = () => (
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Coming soon</p>
+              <p>Coming soon!</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
