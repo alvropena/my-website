@@ -160,7 +160,7 @@ const Education = () => (
       <div>
         <div className="flex justify-between items-center">
           <h3 className="text-base font-medium">Bachelor of Science - BS, Economics</h3>
-          <p>2024 - 2025</p>
+          <p>2024 - Present</p>
         </div>
         <div className="flex justify-between items-center">
           <p className="text-gray-500">
@@ -175,7 +175,6 @@ const Education = () => (
           </p>
           <p>Hayward, CA</p>
         </div>
-        <p className="mt-1">Grade: Summa Cum Laude</p>
       </div>
       <div>
         <div className="flex justify-between items-center">
@@ -196,7 +195,7 @@ const Education = () => (
           <p>Lima, PE</p>
         </div>
         <p className="mt-1">Grade: Dropout</p>
-        <p className="mt-1">Activities and societies: Founded Lee UP in 2021 as the university's first book club, with the goal of promoting reading among students on campus through a partnership with Librerías SBS, the campus bookstore.</p>
+        <p className="mt-1">Activities and societies: Founded Lee UP in 2021 as the university&apos;s first book club, with the goal of promoting reading among students on campus through a partnership with Librerías SBS, the campus bookstore.</p>
       </div>
     </div>
   </section>
