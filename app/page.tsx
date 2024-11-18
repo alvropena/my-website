@@ -1,30 +1,47 @@
+import { Button } from "@/components/ui/button"
+import { MoonIcon } from "lucide-react"
+import { LinkedInLogoIcon, EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
+
 export default function Home() {
   return (
     <main>
       <header className="flex justify-between items-center p-4 border-b">
-        <h1 className="text-2xl font-bold">Alvaro Peña</h1>
-        <div className="flex items-center gap-4">
-          <button className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
-            Edit
-          </button>
-          <button className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-              />
-            </svg>
-          </button>
-        </div>
+        <Button variant="secondary">
+          Edit
+        </Button>
+        <Button variant="ghost" size="icon">
+          <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
       </header>
+      <h1 className="text-2xl font-bold text-center py-4">Alvaro Peña</h1>
+      <p className="text-gray-500 text-center text-lg mb-4">AI Engineer</p>
+      <div className="flex justify-center gap-4 mb-8">
+        <Button variant="ghost" size="icon" asChild>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <LinkedInLogoIcon className="h-5 w-5" />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </Button>
+        <Button variant="ghost" size="icon" asChild>
+          <a href="mailto:email@example.com">
+            <EnvelopeClosedIcon className="h-5 w-5" />
+            <span className="sr-only">Email</span>
+          </a>
+        </Button>
+        <Button variant="ghost" size="icon" asChild>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <GitHubLogoIcon className="h-5 w-5" />
+            <span className="sr-only">GitHub</span>
+          </a>
+        </Button>
+      </div>
+      <p className="text-center max-w-2xl mx-auto px-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+      </p>
     </main>
   );
 }
