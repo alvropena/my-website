@@ -38,14 +38,6 @@ const Summary = ({ skills }: { skills: string[] }) => (
     <p className="text-left">
       AI Engineer with expertise in building scalable machine learning applications and full-stack development. Led development of AI-powered solutions at Revolve Labs, including chatbots and natural language interfaces. Previously founded an EdTech startup and brings strong analytical skills from finance background. Proficient in Python, React, and cloud technologies with proven experience deploying ML systems serving thousands of daily users.
     </p>
-    <h2 className="text-lg font-semibold pt-2">Skills</h2>
-    <div className="flex flex-wrap gap-2 justify-center">
-      {skills.map((skill) => (
-        <Badge key={skill} variant="secondary">
-          {skill}
-        </Badge>
-      ))}
-    </div>
   </div>
 )
 
@@ -229,6 +221,35 @@ const Certifications = () => (
       </div>
     </div>
   </section>
+)
+
+const Skills = ({ skills }: { skills: string[] }) => (
+  <section className="px-4 space-y-3">
+    <h2 className="text-lg font-semibold">Skills</h2>
+    <div className="grid grid-cols-8 gap-2">
+      {skills.map((skill) => (
+        <Badge key={skill} variant="secondary" className="justify-center mx-1 w-full text-xs">
+          {skill}
+        </Badge>
+      ))}
+    </div>
+  </section>
+)
+
+const Languages = () => (
+  <section className="px-4 space-y-3">
+    <h2 className="text-lg font-semibold">Languages</h2>
+    <div className="space-y-2">
+      <div>
+        <p className="font-medium">English</p>
+        <p className="text-gray-500">Native or bilingual proficiency</p>
+      </div>
+      <div>
+        <p className="font-medium">Italian</p>
+        <p className="text-gray-500">Elementary proficiency</p>
+      </div>
+    </div>
+  </section>
 );
 
 const Footer = () => (
@@ -252,8 +273,8 @@ export default function Home() {
     "Python", "JavaScript", "TypeScript", "React", "Next.js",
     "Node.js", "FastAPI", "SQLAlchemy", "SQL", "MongoDB",
     "Docker", "Kubernetes", "AWS", "Git", "CI/CD",
-    "Machine Learning", "TensorFlow", "PyTorch",
-    "React.js", "Redux.js", "React Hooks", "React Router", "Vercel"
+     "TensorFlow", "PyTorch",
+    "React.js", "Redux.js", "Vercel"
   ];
 
   const skillCategories = [
@@ -280,6 +301,8 @@ export default function Home() {
       <Education />
       <Projects />
       <Certifications />
+      <Skills skills={skills} />
+      <Languages />
       <Footer />
     </main>
   );
