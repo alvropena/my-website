@@ -6,7 +6,7 @@ export function MdxContent({ code }: { code: string }) {
   const MDXContent = useMDXComponent(code)
 
   return (
-    <div className="prose prose-neutral max-w-none">
+    <div className="prose">
       <MDXContent />
     </div>
   )
