@@ -1,4 +1,5 @@
 import { GitHubLogoIcon, TwitterLogoIcon, VideoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 export default function Content() {
 	return (
@@ -6,28 +7,28 @@ export default function Content() {
 			<h1 className="text-2xl font-light mb-4">alvaro peña</h1>
 			<ul className="flex gap-4 text-sm text-gray-600 mb-4">
 				<li>
-					<a href="/blog" className="hover:text-[var(--hover-color)] group">
+					<Link href="/blog" className="hover:text-[var(--hover-color)] group">
 						<span className="group-hover:hidden">blog</span>
 						<span className="hidden group-hover:inline">[blog]</span>
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a href="/projects" className="hover:text-[var(--hover-color)] group">
+					<Link href="/projects" className="hover:text-[var(--hover-color)] group">
 						<span className="group-hover:hidden">projects</span>
 						<span className="hidden group-hover:inline">[projects]</span>
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a href="/resume" className="hover:text-[var(--hover-color)] group">
+					<Link href="/resume" className="hover:text-[var(--hover-color)] group">
 						<span className="group-hover:hidden">resume</span>
 						<span className="hidden group-hover:inline">[resume]</span>
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a href="/contact" className="hover:text-[var(--hover-color)] group">
+					<Link href="/contact" className="hover:text-[var(--hover-color)] group">
 						<span className="group-hover:hidden">contact</span>
 						<span className="hidden group-hover:inline">[contact]</span>
-					</a>
+					</Link>
 				</li>
 			</ul>
 			<p className="text-sm text-gray-600 max-w-sm text-center">
