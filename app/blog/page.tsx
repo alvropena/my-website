@@ -1,5 +1,6 @@
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc, format } from 'date-fns'
+import Link from 'next/link'
 
 export default function BlogPage() {
   const posts = allPosts.sort((a, b) =>
@@ -13,12 +14,12 @@ export default function BlogPage() {
         {posts.map((post) => (
           <article key={post.slug} className="border-b border-gray-200 pb-8">
             <h2 className="text-xl mb-2">
-              <a
+              <Link
                 href={post.url}
                 className="hover:text-[var(--hover-color)]"
               >
                 {post.title}
-              </a>
+              </Link>
             </h2>
             <div className="text-sm text-gray-600 mb-2">
               last updated: {format(new Date(post.date), "MMMM do, yyyy").toLowerCase()}
