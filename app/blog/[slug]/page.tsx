@@ -16,7 +16,7 @@ type PageProps = {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function PostPage({ params, searchParams }: PageProps) {
+export default async function PostPage({ params }: PageProps) {
   const post = allPosts.find((post) => post.slug === params.slug)
 
   if (!post) {
