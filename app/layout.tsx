@@ -28,6 +28,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 							<nav className="max-w-2xl mx-auto px-4">
 								<ul className="flex gap-4 text-sm text-gray-600 justify-center">
 									<li>
+										<Link href="/" className="hover:text-blue-600 group">
+											<span className="group-hover:hidden">home</span>
+											<span className="hidden group-hover:inline">[home]</span>
+										</Link>
+									</li>
+									<li>
 										<Link href="/blog" className="hover:text-blue-600 group">
 											<span className="group-hover:hidden">blog</span>
 											<span className="hidden group-hover:inline">[blog]</span>
