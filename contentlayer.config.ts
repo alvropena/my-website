@@ -15,11 +15,18 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       resolve: (post) => `/blog/${post.slug}`,
     },
+    body: {
+      type: 'json',
+      resolve: (post) => post.body,
+    },
   },
 }))
 
 export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Post],
-  disableImportAliasWarning: true
+  mdx: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
 })

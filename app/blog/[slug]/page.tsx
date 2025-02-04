@@ -9,14 +9,13 @@ export async function generateStaticParams() {
   }))
 }
 
-type PageProps = {
+type Props = {
   params: {
     slug: string
   }
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function PostPage({ params }: PageProps) {
+export default function PostPage({ params }: Props) {
   const post = allPosts.find((post) => post.slug === params.slug)
 
   if (!post) {
