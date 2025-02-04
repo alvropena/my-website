@@ -30,6 +30,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "content/posts/mobile-apps.mdx"  ],
   "exclude": ["node_modules"]
 }
