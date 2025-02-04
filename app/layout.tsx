@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/theme-provider";
 import Link from 'next/link';
 import { GitHubLogoIcon, TwitterLogoIcon, VideoIcon } from "@radix-ui/react-icons";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
 	title: "Alvaro Peña",
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 							</nav>
 						</header>
 						{children}
+						<Analytics />
 						<footer className="fixed w-full bottom-0 py-4">
 							<div className="max-w-2xl mx-auto px-4">
 								<div className="flex justify-center gap-4 text-gray-600">
