@@ -1,5 +1,5 @@
 import { allPosts } from 'contentlayer/generated'
-import { compareDesc } from 'date-fns'
+import { compareDesc, format } from 'date-fns'
 
 export default function BlogPage() {
   const posts = allPosts.sort((a, b) =>
@@ -8,7 +8,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-2xl mx-auto py-16 px-4">
-      <h1 className="text-3xl font-light mb-8">Blog Posts</h1>
+      <h1 className="text-3xl font-light mb-8">blog posts</h1>
       <div className="space-y-8">
         {posts.map((post) => (
           <article key={post.slug} className="border-b border-gray-200 pb-8">
@@ -20,7 +20,9 @@ export default function BlogPage() {
                 {post.title}
               </a>
             </h2>
-            <div className="text-sm text-gray-600 mb-2">{post.date}</div>
+            <div className="text-sm text-gray-600 mb-2">
+              last updated: {format(new Date(post.date), "MMMM do, yyyy").toLowerCase()}
+            </div>
             <p className="text-gray-600">{post.excerpt}</p>
           </article>
         ))}
