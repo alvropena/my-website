@@ -6,9 +6,9 @@ export default function Content() {
 			<h1 className="text-2xl font-light mb-4">alvaro peña</h1>
 			<ul className="flex gap-4 text-sm text-gray-600 mb-4">
 				<li>
-					<a href="https://alvropena.beehiiv.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--hover-color)] group">
-						<span className="group-hover:hidden">newsletter</span>
-						<span className="hidden group-hover:inline">[newsletter]</span>
+					<a href="/blog" className="hover:text-[var(--hover-color)] group">
+						<span className="group-hover:hidden">blog</span>
+						<span className="hidden group-hover:inline">[blog]</span>
 					</a>
 				</li>
 				<li>
@@ -34,13 +34,13 @@ export default function Content() {
 				software engineer based in san francisco, ca.
 			</p>
 			<div className="flex justify-evenly w-full max-w-sm text-gray-600 mt-4">
-				<a href="https://github.com/alvropena" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--hover-color)]">
+				<a href="https://github.com/alvropena" className="hover:text-[var(--hover-color)]">
 					<GitHubLogoIcon className="w-4 h-4" />
 				</a>
-				<a href="https://twitter.com/alvropenaa" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--hover-color)]">
+				<a href="https://twitter.com/alvropenaa" className="hover:text-[var(--hover-color)]">
 					<TwitterLogoIcon className="w-4 h-4" />
 				</a>
-				<a href="https://youtube.com/@alvropena" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--hover-color)]">
+				<a href="https://youtube.com/@alvropena" className="hover:text-[var(--hover-color)]">
 					<VideoIcon className="w-4 h-4" />
 				</a>
 			</div>
