@@ -1,12 +1,7 @@
 import { allPosts } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import { format } from 'date-fns'
-
-interface PostPageProps {
-  params: {
-    slug: string
-  }
-}
+import { MdxContent } from '@/components/mdx-content'
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -14,7 +9,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function postPage({ params }: PostPageProps) {
+export default function postPage({ params }: { params: { slug: string } }) {
   const post = allPosts.find((post) => post.slug === params.slug)
 
   if (!post) {
@@ -27,9 +22,7 @@ export default function postPage({ params }: PostPageProps) {
       <div className="text-sm text-gray-600 mb-8">
         {format(new Date(post.date), "MMMM do, yyyy").toLowerCase()}
       </div>
-      <div className="prose">
-        {post.body.code}
-      </div>
+      <MdxContent code={post.body.code} />
     </article>
   )
 }
