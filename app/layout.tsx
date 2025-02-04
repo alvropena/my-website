@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/theme-provider";
 import Link from 'next/link';
+import { GitHubLogoIcon, TwitterLogoIcon, VideoIcon } from "@radix-ui/react-icons";
 
 export const metadata: Metadata = {
 	title: "Alvaro Peña",
@@ -61,6 +62,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
 							</nav>
 						</header>
 						{children}
+						<footer className="fixed w-full bottom-0 py-4">
+							<div className="max-w-2xl mx-auto px-4">
+								<div className="flex justify-center gap-4 text-gray-600">
+									<a href="https://github.com/alvropena" className="hover:text-blue-600">
+										<GitHubLogoIcon className="w-4 h-4" />
+									</a>
+									<a href="https://twitter.com/alvropenaa" className="hover:text-blue-600">
+										<TwitterLogoIcon className="w-4 h-4" />
+									</a>
+									<a href="https://youtube.com/@alvropena" className="hover:text-blue-600">
+										<VideoIcon className="w-4 h-4" />
+									</a>
+								</div>
+							</div>
+						</footer>
 					</ThemeProvider>
 				</body>
 			</html>
