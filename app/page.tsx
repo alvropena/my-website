@@ -3,7 +3,7 @@ import { GitHubLogoIcon, TwitterLogoIcon, VideoIcon } from '@radix-ui/react-icon
 export default function Content() {
 	return (
 		<div className="h-screen flex flex-col items-center justify-center [--hover-color:theme(colors.blue.600)]">
-			<h1 className="text-2xl font-light mb-4">Alvaro Peña</h1>
+			<h1 className="text-2xl font-light mb-4">alvaro peña</h1>
 			<ul className="flex gap-4 text-sm text-gray-600 mb-4">
 				<li>
 					<a href="https://alvropena.beehiiv.com" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--hover-color)] group">
