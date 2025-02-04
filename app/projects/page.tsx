@@ -8,19 +8,19 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "project one",
-    description: "a brief description of your first project",
-    link: "https://github.com/yourusername/project-one"
+    title: "personal website",
+    description: "minimalist portfolio and blog built with Next.js, TypeScript, and TailwindCSS",
+    link: "https://github.com/alvropena/my-website"
   },
   {
-    title: "project two",
-    description: "a brief description of your second project",
-    link: "https://github.com/yourusername/project-two"
+    title: "spotify clone",
+    description: "a spotify clone built with Next.js and Supabase",
+    link: "https://github.com/alvropena/spotify-clone"
   },
   {
-    title: "project three",
-    description: "a brief description of your third project",
-    link: "https://github.com/yourusername/project-three"
+    title: "notion clone",
+    description: "a notion-like editor with real-time collaboration",
+    link: "https://github.com/alvropena/notion-clone"
   }
 ]
 
@@ -36,6 +36,7 @@ export default function ProjectsPage() {
                 href={project.link}
                 className="hover:text-[var(--hover-color)]"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {project.title}
               </Link>

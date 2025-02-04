@@ -15,7 +15,7 @@ export default function ContactPage() {
           </Link>
         </p>
         <p>
-          i'm also on{' '}
+          i&apos;m also on{' '}
           <Link 
             href="https://github.com/yourusername" 
             className="hover:text-[var(--hover-color)]"
