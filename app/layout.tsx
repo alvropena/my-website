@@ -33,8 +33,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header className="fixed max-w-2xl mx-auto left-0 right-0 top-0 py-4 bg-white border-b border-gray-100">
               <nav className="flex justify-between text-sm text-gray-600 px-4">
                 <Link href="/" className="hover:text-blue-600 group">
-                  <span className="group-hover:hidden">alvaro peña</span>
-                  <span className="hidden group-hover:inline">[alvaro peña]</span>
+                  <span className="group-hover:hidden">ap</span>
+                  <span className="hidden group-hover:inline">[ap]</span>
                 </Link>
                 <ul className="flex gap-4 ">
                   <li>
