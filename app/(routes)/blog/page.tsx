@@ -9,7 +9,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-2xl mx-auto py-16 px-4">
-      <h1 className="text-3xl font-light mb-8">blog posts</h1>
+      <h1 className="text-3xl font-light mb-8">blog</h1>
       <div className="space-y-8">
         {posts.map((post) => (
           <article key={post.slug} className="border-b border-gray-200 pb-8">
