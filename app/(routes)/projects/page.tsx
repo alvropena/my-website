@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { H1, H2, Paragraph, SmallText } from '@/components/typography'
 
 type Project = {
   title: string
@@ -54,12 +55,12 @@ const projects: Project[] = [
 export default function ProjectsPage() {
   return (
     <div className="max-w-2xl mx-auto py-16 px-4">
-      <h1 className="text-3xl font-light mb-8">projects</h1>
+      <H1>projects</H1>
       <div className="space-y-8">
         {projects.map((project) => (
           <article key={project.title} className="border-b border-gray-200 pb-8">
             <div className="flex justify-between items-center mb-2">
-              <h2 className="text-xl">
+              <H2>
                 <Link
                   href={project.link}
                   className="hover:text-[var(--hover-color)]"
@@ -68,13 +69,15 @@ export default function ProjectsPage() {
                 >
                   {project.title}
                 </Link>
-              </h2>
-              <p className="text-gray-500 text-sm">{project.dates}</p>
+              </H2>
+              <SmallText>{project.dates}</SmallText>
             </div>
-            <p className="text-gray-600">{project.description}</p>
-            <ul className="mt-2 text-gray-600 text-sm list-disc pl-4">
+            <Paragraph>{project.description}</Paragraph>
+            <ul className="mt-2 list-disc pl-4">
               {project.achievements.map((achievement, index) => (
-                <li key={index}>{achievement}</li>
+                <li key={index}>
+                  <SmallText>{achievement}</SmallText>
+                </li>
               ))}
             </ul>
           </article>

@@ -1,3 +1,5 @@
+import { H1, H2, H3, Paragraph, SmallText } from '@/components/typography'
+
 // Resume Data
 const resumeData = {
   personalInfo: {
@@ -91,16 +93,20 @@ interface ExperienceItemProps {
 function ContactInfo() {
   const { email, website, github } = resumeData.personalInfo.contact;
   return (
-    <div className="flex gap-2 text-sm mb-4 justify-center">
-      <p>{email}</p>
-      <p>|</p>
-      <a href={`https://${website}`} className="hover:underline">
-        {website}
-      </a>
-      <p>|</p>
-      <a href={`https://${github}`} className="hover:underline">
-        {github}
-      </a>
+    <div className="flex gap-2 justify-center mb-4">
+      <SmallText>{email}</SmallText>
+      <SmallText>|</SmallText>
+      <SmallText>
+        <a href={`https://${website}`} className="hover:underline">
+          {website}
+        </a>
+      </SmallText>
+      <SmallText>|</SmallText>
+      <SmallText>
+        <a href={`https://${github}`} className="hover:underline">
+          {github}
+        </a>
+      </SmallText>
     </div>
   );
 }
@@ -198,16 +204,14 @@ function TechnicalSkills() {
 export default function ResumePage() {
   return (
     <div className="max-w-2xl mx-auto px-4 mt-16 mb-16">
-      <h1 className="text-2xl font-normal mb-1 text-center">
-        {resumeData.personalInfo.name}
-      </h1>
+      <H1 className="text-center mb-1">{resumeData.personalInfo.name}</H1>
       <ContactInfo />
       <Education />
       <Experience />
       <TechnicalSkills />
       <div className="flex justify-between gap-2">
-        <p className="text-sm text-blue-500">build your resume</p>
-        <p className="text-sm text-gray-500">download as pdf</p>
+        <SmallText className="text-blue-500">build your resume</SmallText>
+        <SmallText className="text-gray-500">download as pdf</SmallText>
       </div>
     </div>
   );
