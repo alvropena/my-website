@@ -93,7 +93,7 @@ interface ExperienceItemProps {
 function ContactInfo() {
   const { email, website, github } = resumeData.personalInfo.contact;
   return (
-    <div className="flex gap-2 justify-center mb-4">
+    <div className="flex gap-2 mb-4">
       <SmallText>{email}</SmallText>
       <SmallText>|</SmallText>
       <SmallText>
@@ -204,7 +204,7 @@ function TechnicalSkills() {
 export default function ResumePage() {
   return (
     <div className="max-w-2xl mx-auto px-4 mt-16 mb-16">
-      <H1 className="text-center mb-1">{resumeData.personalInfo.name}</H1>
+      <H1 className="mb-1">{resumeData.personalInfo.name}</H1>
       <ContactInfo />
       <Education />
       <Experience />

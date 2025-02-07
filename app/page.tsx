@@ -27,7 +27,7 @@ export default function Content() {
       <Paragraph className="max-w-sm text-center">
         in 2023, i dropped out to build{" "}
         <Link
-          href="https://dudda.co"
+          href="https://dudda.app"
           className="underline hover:text-blue-600 group"
         >
           <span className="group-hover:hidden">dudda</span>
@@ -66,7 +66,7 @@ export default function Content() {
       <Paragraph className="max-w-sm text-center">
         in january 2025, i quit to go all-in on my next venture:{" "}
         <Link
-          href="https://chop.dev"
+          href="https://chop.so"
           className="underline hover:text-blue-600 group"
         >
           <span className="group-hover:hidden">chop</span>
@@ -76,7 +76,7 @@ export default function Content() {
       <Paragraph className="max-w-sm text-center">
         i'm currently building chop,{" "}download it {" "}
         <Link
-          href="https://chop.dev"
+          href="https://chop.so"
           className="underline hover:text-blue-600 group"
         >
           <span className="group-hover:hidden">here</span>
