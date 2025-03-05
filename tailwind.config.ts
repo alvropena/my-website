@@ -6,12 +6,19 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{md,mdx}"
   ],
   theme: {
   	extend: {
-  		colors: {
+  		backgroundColor: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+  		},
+  		textColor: {
+  			foreground: 'hsl(var(--foreground))',
+  			background: 'hsl(var(--background))',
+  		},
+  		colors: {
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -51,15 +58,35 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+  		borderColor: {
+  			DEFAULT: 'hsl(var(--border))'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      typography: {
+        DEFAULT: {
+          css: {
+            table: {
+              borderCollapse: 'collapse',
+              width: '100%',
+            },
+            'thead th': {
+              borderBottom: '2px solid #e5e7eb',
+              fontWeight: '600',
+            },
+            'tbody td': {
+              borderBottom: '1px solid #e5e7eb',
+            },
+          },
+        },
+      },
   	}
   },
   plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animate")
   ],
 } satisfies Config;

@@ -23,6 +23,9 @@ export const Post = defineDocumentType(() => ({
 
 const prettyCodeOptions = {
   theme: 'github-dark',
+  getHighlighter: (options: any) => {
+    return import('shiki').then(({ createHighlighter }) => createHighlighter(options))
+  },
   onVisitLine(node: any) {
     if (node.children.length === 0) {
       node.children = [{ type: 'text', value: ' ' }]
@@ -40,9 +43,11 @@ export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [[remarkGfm, { tablePipeAlign: false }]],
+    remarkPlugins: [
+      remarkGfm
+    ],
     rehypePlugins: [
-      rehypeSlug,
+      rehypeSlug as any,
       [rehypePrettyCode, prettyCodeOptions],
     ],
   },
